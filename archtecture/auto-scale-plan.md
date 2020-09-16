@@ -1,12 +1,16 @@
+## AWS auto scaling plan for ticket platform
+
 #### Requirements
 - Your client wants to launch a new feature to an existing online movie ticket platform like [MEGA BOX](https://www.megabox.co.kr/). A new feature is opening limited numbers of a free ticket for the upcoming movie. Tickets are available at a specific date that is notified a week before the opening.
 - The platform usually has 50-100 concurrent users during the day.
 - It is expected that 1,500-2,000 concurrent users will be on the platform.
-- Current architecure is shown below.
+- Current architecture is shown below.
+
 ![current-architecure](./images/before-auto-scaling.png)
 
 
-#### Auto Scaling Plan
+#### Architecture
+
 ![auto-scaling-plan](./images/auto-scaling-plan.png)
 - **EC2 auto-scaling**: Use ASG to scale out to max 3 instances 10 min before ticket opening. Scale in when CPU utilization in under 20% for 15 min.
 - **Aurora scale-out / in**: Use Aurora auto-scaling policy to create read replicas up to 3. The scaling policy is based on the database connection.
