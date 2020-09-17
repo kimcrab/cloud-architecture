@@ -6,7 +6,7 @@
 - It is expected that 1,500-2,000 concurrent users will be on the platform.
 - Current architecture is shown below.
 
-![current-architecure](./images/before-auto-scaling.png)
+![current-architecture](./images/before-auto-scaling.png)
 
 
 #### Architecture
