@@ -1,4 +1,4 @@
-## Search feature implemented by Elasticsearch
+## Search feature implemented with Elasticsearch
 
 #### Requirments
 - The existing application has a search feature that is getting slower as the data in the database gets bigger.
